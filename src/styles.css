@@ -1,0 +1,84 @@
+.container {
+  background: rgb(65, 182, 241);
+  margin: 30px auto;
+  padding: 30px 60px;
+  box-shadow: 5px 5px 10px rgb(10 10 10 / 60%);
+  border-radius: 12px;
+  max-width: 700px;
+  box-shadow: #5b5d60;
+  text-align: center;
+  display: block;
+}
+.container-2 {
+  background: rgb(146, 215, 250);
+  margin: 30px auto;
+  padding: 30px 60px;
+  box-shadow: 5px 5px 10px rgb(10 10 10 / 45%);
+  border-radius: 12px;
+  max-width: 700px;
+  box-shadow: #5b5d60;
+  text-align: center;
+  display: block;
+  color: #5b5d60;
+}
+
+.bg-light {
+  border-radius: 8px;
+  box-shadow: 5px 5px 10px rgba(48, 59, 4, 0.2);
+}
+.choose {
+  background: #d6e2f3;
+  border-radius: 8px;
+  border: none;
+  font-size: 24px;
+}
+.search {
+  background: #7c7c7c;
+  color: #5b5d60;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+}
+.location,
+.loop {
+  color: grey;
+  font-size: 26px;
+}
+
+.temperature {
+  font-size: 78px;
+  color: #7c7c7c;
+  padding-top: 64px;
+}
+.units {
+  position: relative;
+  top: -42px;
+}
+h1 {
+  font-size: 28px;
+  line-height: 28px;
+  margin-bottom: 46px;
+}
+
+.today,
+.conditions {
+  font-size: 20px;
+  color: #7c7c7c;
+  list-style: none;
+}
+
+.mon,
+.tue,
+.wed,
+.thu,
+.fri {
+  border-radius: 48px;
+}
+.app {
+  margin-top: 24px;
+  border: 1px solid #7c7c7c;
+  border-radius: 10px;
+  background: rgb(146, 215, 250);
+  color: #7c7c7c;
+  box-shadow: 5px 5px 10px rgb(10 10 10 / 30%);
+}
