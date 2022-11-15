@@ -47,19 +47,18 @@
 
 .temperature {
   font-size: 78px;
-  color: #bebdbd;
+  color: #fff;
   padding-top: 64px;
 }
 .units {
   position: relative;
   top: -42px;
-  text-decoration: none;
 }
 h1 {
   font-size: 28px;
   line-height: 28px;
   margin-bottom: 46px;
-  color: #959595c7;
+  color: #fff;
 }
 
 .today,
@@ -89,7 +88,11 @@ h1 {
 .active {
   color: #fff;
   cursor: default;
+  text-decoration: none;
 }
 .active:hover {
+  text-decoration: none;
+}
+.convert {
   text-decoration: none;
 }

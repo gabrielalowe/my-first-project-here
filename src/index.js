@@ -37,8 +37,6 @@ actualTime.innerHTML = `${hours}:${minutes} `;
 actualDate.innerHTML = `${weekDay}, ${month} ${date} `;
 
 function showTemperature(response) {
-  console.log(response.data);
-
   document.querySelector("#city").innerHTML = response.data.city;
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.temperature.current
