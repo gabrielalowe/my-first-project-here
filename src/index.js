@@ -47,7 +47,7 @@ function showTemperature(response) {
     response.data.wind.speed
   );
   document.querySelector("#condition").innerHTML =
-    response.data.weather[0].main;
+    response.data.weather[0].description;
 }
 
 function introductionCity(city) {
