@@ -41,13 +41,13 @@
 }
 .location,
 .loop {
-  color: grey;
+  color: #bebdbd;
   font-size: 26px;
 }
 
 .temperature {
   font-size: 78px;
-  color: #7c7c7c;
+  color: #bebdbd;
   padding-top: 64px;
 }
 .units {
@@ -58,12 +58,13 @@ h1 {
   font-size: 28px;
   line-height: 28px;
   margin-bottom: 46px;
+  color: #959595c7;
 }
 
 .today,
 .conditions {
   font-size: 20px;
-  color: #7c7c7c;
+  color: rgba(255, 255, 255, 0.952);
   list-style: none;
   text-transform: capitalize;
   padding-left: 0rem;
