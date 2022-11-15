@@ -53,6 +53,7 @@
 .units {
   position: relative;
   top: -42px;
+  text-decoration: none;
 }
 h1 {
   font-size: 28px;
@@ -84,4 +85,11 @@ h1 {
   background: rgb(146, 215, 250);
   color: #7c7c7c;
   box-shadow: 5px 5px 10px rgb(10 10 10 / 30%);
+}
+.active {
+  color: #fff;
+  cursor: default;
+}
+.active:hover {
+  text-decoration: none;
 }
