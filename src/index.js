@@ -35,6 +35,13 @@ let minutes = String(now.getMinutes()).padStart(2, "0");
 
 actualTime.innerHTML = `${hours}:${minutes} `;
 actualDate.innerHTML = `${weekDay}, ${month} ${date} `;
+
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  return days[day];
+}
 function getForecast(coordinates) {
   let apiKey = "1be09478a4ftf06c7f8edo170e403d22";
   let units = "metric";
@@ -43,23 +50,33 @@ function getForecast(coordinates) {
 }
 
 function displayForecast(response) {
-  console.log(response.data.daily);
+  let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
-  let days = ["Thu", "Fri", "Sat", "Sun"];
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      ` 
+
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        ` 
           <div class="col-2">
-            <div class="weather-forecast-date">${day}</div>
-            <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-night.png" alt="" width="42" />
+            <div class="weather-forecast-date">${formatDay(
+              forecastDay.time
+            )}</div>
+            <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${
+              forecastDay.condition.icon
+            }.png" alt="" width="42" />
             <div class="weather-forecast-temperatures">
-              <span class="weather-forecast-temperature-max">32°C</span>
-              <span class="weather-forecast-temperature-min">24°C</span>
+              <span class="weather-forecast-temperature-max">${Math.round(
+                forecastDay.temperature.maximum
+              )}°C</span>
+              <span class="weather-forecast-temperature-min">${Math.round(
+                forecastDay.temperature.minimum
+              )}°C</span>
             </div>
           </div>
         `;
+    }
   });
 
   forecastHTML = forecastHTML + `</div>`;
@@ -145,4 +162,4 @@ fahrenheitLink.addEventListener("click", changeToFahrenheit);
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", changeToCelsius);
 
-introductionCity("New York");
+introductionCity("Tulum");
