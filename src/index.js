@@ -70,6 +70,7 @@ function displayForecast(response) {
               <span class="weather-forecast-temperature-max">${Math.round(
                 forecastDay.temperature.maximum
               )}°C</span>
+              </br>
               <span class="weather-forecast-temperature-min">${Math.round(
                 forecastDay.temperature.minimum
               )}°C</span>
