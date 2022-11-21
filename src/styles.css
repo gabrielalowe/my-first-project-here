@@ -70,13 +70,6 @@ h1 {
   padding-left: 0rem;
 }
 
-.mon,
-.tue,
-.wed,
-.thu,
-.fri {
-  border-radius: 48px;
-}
 .app {
   margin-top: 24px;
   border: 1px solid #7c7c7c;
@@ -95,4 +88,15 @@ h1 {
 }
 .convert {
   text-decoration: none;
+}
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+}
+.weather-forecast-date {
+  font-size: 16px;
+  color: #bababa;
+}
+.weather-forecast-temperature-min {
+  opacity: 0.5;
 }

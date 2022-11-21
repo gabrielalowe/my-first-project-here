@@ -36,6 +36,12 @@ let minutes = String(now.getMinutes()).padStart(2, "0");
 actualTime.innerHTML = `${hours}:${minutes} `;
 actualDate.innerHTML = `${weekDay}, ${month} ${date} `;
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  forecastElement.innerHTML = "Forecast";
+}
+
 function showTemperature(response) {
   document.querySelector("#city").innerHTML = response.data.city;
   document.querySelector("#temperature").innerHTML = Math.round(
@@ -115,3 +121,4 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", changeToCelsius);
 
 introductionCity("New York");
+displayForecast();
